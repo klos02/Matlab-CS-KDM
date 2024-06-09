@@ -37,15 +37,14 @@
             label2 = new Label();
             label1 = new Label();
             trackBar1 = new TrackBar();
-            label5 = new Label();
-            trackBar3 = new TrackBar();
             label6 = new Label();
             decimatedSignalPlayButton = new Button();
             label7 = new Label();
             label8 = new Label();
+            comboBox1 = new ComboBox();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)trackBar3).BeginInit();
             SuspendLayout();
             // 
             // playCreated
@@ -139,38 +138,15 @@
             trackBar1.Value = 1;
             trackBar1.Scroll += trackBar1_Scroll;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(741, 272);
-            label5.Name = "label5";
-            label5.Size = new Size(39, 15);
-            label5.TabIndex = 24;
-            label5.Text = "100Hz";
-            // 
-            // trackBar3
-            // 
-            trackBar3.LargeChange = 100;
-            trackBar3.Location = new Point(357, 272);
-            trackBar3.Maximum = 2000;
-            trackBar3.Minimum = 100;
-            trackBar3.Name = "trackBar3";
-            trackBar3.Size = new Size(378, 45);
-            trackBar3.SmallChange = 100;
-            trackBar3.TabIndex = 23;
-            trackBar3.TickFrequency = 100;
-            trackBar3.Value = 100;
-            trackBar3.Scroll += trackBar3_Scroll;
-            // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label6.Location = new Point(40, 261);
+            label6.Location = new Point(40, 279);
             label6.Name = "label6";
-            label6.Size = new Size(266, 56);
+            label6.Size = new Size(518, 28);
             label6.TabIndex = 22;
-            label6.Text = "Oczekiwana częstotliwość \r\npróbkowania po decymacji\r\n";
+            label6.Text = "Oczekiwana częstotliwość próbkowania po decymacji\r\n";
             // 
             // decimatedSignalPlayButton
             // 
@@ -203,16 +179,34 @@
             label8.Text = "Filtracja antyaliasingowa i zmniejszenie liczby próbek \r\nmetodą decymacji";
             label8.TextAlign = ContentAlignment.TopCenter;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(564, 284);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(97, 23);
+            comboBox1.TabIndex = 29;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(667, 287);
+            label5.Name = "label5";
+            label5.Size = new Size(21, 15);
+            label5.TabIndex = 30;
+            label5.Text = "Hz";
+            // 
             // DecimateForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label5);
+            Controls.Add(comboBox1);
             Controls.Add(label7);
             Controls.Add(label8);
             Controls.Add(decimatedSignalPlayButton);
-            Controls.Add(label5);
-            Controls.Add(trackBar3);
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(trackBar2);
@@ -228,7 +222,6 @@
             Load += DecimateForm_Load;
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)trackBar3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -244,11 +237,11 @@
         private Label label2;
         private Label label1;
         private TrackBar trackBar1;
-        private Label label5;
-        private TrackBar trackBar3;
         private Label label6;
         private Button decimatedSignalPlayButton;
         private Label label7;
         private Label label8;
+        private ComboBox comboBox1;
+        private Label label5;
     }
 }

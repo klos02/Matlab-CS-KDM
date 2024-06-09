@@ -117,12 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="richTextBox1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>Narzędzie służące do analizy wpływu wybranych parametrów filtru FIR dolnoprzepustowego na sygnał otrzymany po filtracji.
 Matlab odbiera potrzebne parametry i wykonuje obliczenia. Następnie wyświetla wykresy oraz zapisuje sygnały wynikowe do pliku. Otrzymane pliki dźwiękowe można odsłuchać i porównać je ze sobą.
 </value>
+  </data>
+  <data name="richTextBox2.Text" xml:space="preserve">
+    <value>Narzędzie służące do analizy wpływu wybranych parametrów filtru Butterwortha oraz nowej częstotliwości próbkowania na sygnały otrzymane po filtrowaniu i decymacji. Matlab wykonuje potrzebne obliczenia, zwraca wykresy i zapisuje dwa pliki wynikowe - sygnał po filtracji i sygnał po decymacji.</value>
   </data>
 </root>

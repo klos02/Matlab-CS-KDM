@@ -46,7 +46,7 @@
             // filterOrderBar
             // 
             filterOrderBar.Location = new Point(325, 167);
-            filterOrderBar.Maximum = 10000;
+            filterOrderBar.Maximum = 100;
             filterOrderBar.Minimum = 1;
             filterOrderBar.Name = "filterOrderBar";
             filterOrderBar.Size = new Size(417, 45);

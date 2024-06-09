@@ -36,6 +36,9 @@
             filtracjaLiniowaButton = new Button();
             lowerSampleRateButton = new Button();
             richTextBox1 = new RichTextBox();
+            label3 = new Label();
+            richTextBox2 = new RichTextBox();
+            richTextBox3 = new RichTextBox();
             SuspendLayout();
             // 
             // button1
@@ -108,11 +111,42 @@
             richTextBox1.TabIndex = 7;
             richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label3.Location = new Point(452, 427);
+            label3.Name = "label3";
+            label3.Size = new Size(349, 25);
+            label3.TabIndex = 8;
+            label3.Text = "Autor: Bartosz Kłosiński WCY21IG1S1";
+            // 
+            // richTextBox2
+            // 
+            richTextBox2.Location = new Point(290, 98);
+            richTextBox2.Name = "richTextBox2";
+            richTextBox2.ReadOnly = true;
+            richTextBox2.Size = new Size(218, 277);
+            richTextBox2.TabIndex = 9;
+            richTextBox2.Text = resources.GetString("richTextBox2.Text");
+            // 
+            // richTextBox3
+            // 
+            richTextBox3.Location = new Point(570, 98);
+            richTextBox3.Name = "richTextBox3";
+            richTextBox3.ReadOnly = true;
+            richTextBox3.Size = new Size(218, 277);
+            richTextBox3.TabIndex = 10;
+            richTextBox3.Text = "Narzędzie służące do analizy wpływu wybranych parametrów DCT na na sygnał otrzymany po rekonstrukcji. Matlab wykonuje obliczenia, zwraca wykresy i zapisuje otrzymany plik dźwiękowy.";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(richTextBox3);
+            Controls.Add(richTextBox2);
+            Controls.Add(label3);
             Controls.Add(richTextBox1);
             Controls.Add(lowerSampleRateButton);
             Controls.Add(filtracjaLiniowaButton);
@@ -136,5 +170,8 @@
         private Button filtracjaLiniowaButton;
         private Button lowerSampleRateButton;
         private RichTextBox richTextBox1;
+        private Label label3;
+        private RichTextBox richTextBox2;
+        private RichTextBox richTextBox3;
     }
 }

@@ -19,9 +19,24 @@ namespace Matlab_CS_KDM
         public DecimateForm()
         {
             InitializeComponent();
+            InitializeComboBox();
             playCreated.Enabled = false;
             decimatedSignalPlayButton.Enabled = false;
         }
+
+        private void InitializeComboBox()
+        {
+            // Dodanie wartości typu double do ComboBox
+            double[] values = { 100,125,160,200,250,320,400,500,800,1000,1600,2000 };
+            foreach (double value in values)
+            {
+                comboBox1.Items.Add(value);
+            }
+
+            comboBox1.SelectedIndex = 0; 
+
+        }
+
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
@@ -33,13 +48,6 @@ namespace Matlab_CS_KDM
         {
             order = trackBar2.Value;
             label4.Text = order.ToString();
-        }
-
-        private void trackBar3_Scroll(object sender, EventArgs e)
-        {
-            trackBar3.Value = (int)Math.Round(trackBar3.Value / 100.0) * 100;
-            newSampling = trackBar3.Value;
-            label5.Text = newSampling.ToString() + "Hz";
         }
 
         private void playOriginal_Click(object sender, EventArgs e)
@@ -76,6 +84,11 @@ namespace Matlab_CS_KDM
         private void DecimateForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            newSampling = (double)comboBox1.SelectedItem;
         }
     }
 }
