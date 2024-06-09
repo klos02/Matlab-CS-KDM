@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Media;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,7 @@ namespace Matlab_CS_KDM
         public FIRForm()
         {
             InitializeComponent();
+            playCreated.Enabled = false;
         }
 
         private void filterOrderBar_Scroll(object sender, EventArgs e)
@@ -37,7 +39,8 @@ namespace Matlab_CS_KDM
         private void button1_Click(object sender, EventArgs e)
         {
             MatlabHandler matlabHandler = new MatlabHandler();
-            matlabHandler.CallFirFunction(n, cutOff);
+            int done = matlabHandler.CallFirFunction(n, cutOff);
+            if (done == 0) playCreated.Enabled = true;
         }
 
         private void playOriginal_Click(object sender, EventArgs e)

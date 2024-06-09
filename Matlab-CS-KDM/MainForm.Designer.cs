@@ -28,18 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
             label2 = new Label();
             filtracjaLiniowaButton = new Button();
+            lowerSampleRateButton = new Button();
+            richTextBox1 = new RichTextBox();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(541, 196);
+            button1.Location = new Point(570, 27);
             button1.Name = "button1";
-            button1.Size = new Size(186, 66);
+            button1.Size = new Size(218, 49);
             button1.TabIndex = 0;
             button1.Text = "DCT";
             button1.UseVisualStyleBackColor = true;
@@ -78,19 +81,40 @@
             // 
             // filtracjaLiniowaButton
             // 
-            filtracjaLiniowaButton.Location = new Point(541, 29);
+            filtracjaLiniowaButton.Location = new Point(21, 27);
             filtracjaLiniowaButton.Name = "filtracjaLiniowaButton";
-            filtracjaLiniowaButton.Size = new Size(186, 65);
+            filtracjaLiniowaButton.Size = new Size(218, 49);
             filtracjaLiniowaButton.TabIndex = 4;
             filtracjaLiniowaButton.Text = "Filtracja liniowa FIR";
             filtracjaLiniowaButton.UseVisualStyleBackColor = true;
             filtracjaLiniowaButton.Click += filtracjaLiniowaButton_Click;
+            // 
+            // lowerSampleRateButton
+            // 
+            lowerSampleRateButton.Location = new Point(290, 27);
+            lowerSampleRateButton.Name = "lowerSampleRateButton";
+            lowerSampleRateButton.Size = new Size(218, 49);
+            lowerSampleRateButton.TabIndex = 5;
+            lowerSampleRateButton.Text = "Filtracja antyaliasingowa Butterworth i decymacja\r\n";
+            lowerSampleRateButton.UseVisualStyleBackColor = true;
+            lowerSampleRateButton.Click += lowerSampleRateButton_Click;
+            // 
+            // richTextBox1
+            // 
+            richTextBox1.Location = new Point(21, 98);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.ReadOnly = true;
+            richTextBox1.Size = new Size(218, 277);
+            richTextBox1.TabIndex = 7;
+            richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(richTextBox1);
+            Controls.Add(lowerSampleRateButton);
             Controls.Add(filtracjaLiniowaButton);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -110,5 +134,7 @@
         private Label label1;
         private Label label2;
         private Button filtracjaLiniowaButton;
+        private Button lowerSampleRateButton;
+        private RichTextBox richTextBox1;
     }
 }

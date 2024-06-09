@@ -37,6 +37,8 @@
             button1 = new Button();
             playCreated = new Button();
             playOriginal = new Button();
+            label6 = new Label();
+            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)filterOrderBar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cutoffFreqBar).BeginInit();
             SuspendLayout();
@@ -131,11 +133,33 @@
             playOriginal.UseVisualStyleBackColor = true;
             playOriginal.Click += playOriginal_Click;
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label6.Location = new Point(44, 41);
+            label6.Name = "label6";
+            label6.Size = new Size(705, 50);
+            label6.TabIndex = 14;
+            label6.Text = "Analiza wpływu rzędu filtru oraz częstotliwości odcięcia na rekonstrukcję sygnału\r\npo filtracji dolnoprzepustowej";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            label5.Location = new Point(267, 9);
+            label5.Name = "label5";
+            label5.Size = new Size(237, 32);
+            label5.TabIndex = 13;
+            label5.Text = "Filtracja liniowa FIR";
+            // 
             // FIRForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label6);
+            Controls.Add(label5);
             Controls.Add(playCreated);
             Controls.Add(playOriginal);
             Controls.Add(button1);
@@ -164,5 +188,7 @@
         private Button button1;
         private Button playCreated;
         private Button playOriginal;
+        private Label label6;
+        private Label label5;
     }
 }

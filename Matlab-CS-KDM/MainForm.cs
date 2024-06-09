@@ -76,5 +76,11 @@ namespace Matlab_CS_KDM
             firForm.Show();
 
         }
+
+        private void lowerSampleRateButton_Click(object sender, EventArgs e)
+        {
+            DecimateForm decimateForm = new DecimateForm();
+            decimateForm.Show();
+        }
     }
 }

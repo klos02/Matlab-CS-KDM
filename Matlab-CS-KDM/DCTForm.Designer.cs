@@ -45,7 +45,7 @@
             // 
             // trackBar1
             // 
-            trackBar1.Location = new Point(355, 216);
+            trackBar1.Location = new Point(355, 170);
             trackBar1.Maximum = 1000;
             trackBar1.Name = "trackBar1";
             trackBar1.Size = new Size(378, 45);
@@ -66,7 +66,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(739, 216);
+            label1.Location = new Point(739, 170);
             label1.Name = "label1";
             label1.Size = new Size(34, 15);
             label1.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label2.Location = new Point(38, 216);
+            label2.Location = new Point(38, 170);
             label2.Name = "label2";
             label2.Size = new Size(320, 28);
             label2.TabIndex = 3;
@@ -87,7 +87,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 15F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            label3.Location = new Point(38, 275);
+            label3.Location = new Point(38, 256);
             label3.Name = "label3";
             label3.Size = new Size(147, 28);
             label3.TabIndex = 4;
@@ -96,7 +96,7 @@
             // trackBar2
             // 
             trackBar2.LargeChange = 64;
-            trackBar2.Location = new Point(355, 275);
+            trackBar2.Location = new Point(355, 256);
             trackBar2.Maximum = 10000;
             trackBar2.Minimum = 1;
             trackBar2.Name = "trackBar2";
@@ -109,7 +109,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(739, 275);
+            label4.Location = new Point(739, 256);
             label4.Name = "label4";
             label4.Size = new Size(13, 15);
             label4.TabIndex = 6;
@@ -133,7 +133,7 @@
             label6.Name = "label6";
             label6.Size = new Size(651, 50);
             label6.TabIndex = 8;
-            label6.Text = "Analiza wpływu progu zerowania współczynników DCT i długości bloku na \r\nrekonstrukcję sygnału";
+            label6.Text = "Analiza wpływu progu zerowania współczynników DCT i długości bloku na \r\nrekonstrukcję sygnału po kompresji transformat DCT";
             // 
             // playOriginal
             // 
