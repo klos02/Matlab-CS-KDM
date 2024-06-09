@@ -13,8 +13,8 @@ namespace Matlab_CS_KDM
 {
     public partial class DCTForm : Form
     {
-        private float treshold;
-        private float blockSize;
+        private double treshold;
+        private double blockSize;
         public DCTForm()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace Matlab_CS_KDM
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
-            treshold = (float)(trackBar1.Value / 1000.0);
+            treshold = (double)(trackBar1.Value / 1000.0);
             label1.Text = treshold.ToString();
         }
 
@@ -39,7 +39,7 @@ namespace Matlab_CS_KDM
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
-            blockSize = (float)trackBar2.Value;
+            blockSize = trackBar2.Value;
             label4.Text = blockSize.ToString();
         }
     }
