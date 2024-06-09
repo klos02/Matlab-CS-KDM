@@ -22,6 +22,7 @@ namespace Matlab_CS_KDM
         {
             InitializeComponent();
             playCreated.Enabled = false;
+            //label7.Text = Application.StartupPath;
         }
 
         private void filterOrderBar_Scroll(object sender, EventArgs e)

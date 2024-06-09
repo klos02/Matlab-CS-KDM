@@ -16,8 +16,13 @@ namespace Matlab_CS_KDM
             // Create the MATLAB instance 
             MLApp.MLApp matlab = new MLApp.MLApp();
             var currentDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            var matlabFunctionsDirectory = Path.Combine(currentDirectory, "MatlabFunctions");
+            if (!Directory.Exists(matlabFunctionsDirectory))
+            {
+                throw new DirectoryNotFoundException($"The directory {matlabFunctionsDirectory} does not exist.");
+            }
             // Change to the directory where the function is located 
-            matlab.Execute(@"cd E:\matlabTest");
+            matlab.Execute($@"cd '{matlabFunctionsDirectory}'");
             //Console.WriteLine(currentDirectory);
             // Define the output 
             object result = null;
@@ -38,8 +43,13 @@ namespace Matlab_CS_KDM
             // Create the MATLAB instance 
             MLApp.MLApp matlab = new MLApp.MLApp();
             var currentDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            var matlabFunctionsDirectory = Path.Combine(currentDirectory, "MatlabFunctions");
+            if (!Directory.Exists(matlabFunctionsDirectory))
+            {
+                throw new DirectoryNotFoundException($"The directory {matlabFunctionsDirectory} does not exist.");
+            }
             // Change to the directory where the function is located 
-            matlab.Execute(@"cd E:\matlabTest");
+            matlab.Execute($@"cd '{matlabFunctionsDirectory}'");
             //Console.WriteLine(currentDirectory);
             // Define the output 
             object result = null;
@@ -64,8 +74,13 @@ namespace Matlab_CS_KDM
             // Create the MATLAB instance 
             MLApp.MLApp matlab = new MLApp.MLApp();
             var currentDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            var matlabFunctionsDirectory = Path.Combine(currentDirectory, "MatlabFunctions");
+            if (!Directory.Exists(matlabFunctionsDirectory))
+            {
+                throw new DirectoryNotFoundException($"The directory {matlabFunctionsDirectory} does not exist.");
+            }
             // Change to the directory where the function is located 
-            matlab.Execute(@"cd E:\matlabTest");
+            matlab.Execute($@"cd '{matlabFunctionsDirectory}'");
             //Console.WriteLine(currentDirectory);
             // Define the output 
             object result = null;

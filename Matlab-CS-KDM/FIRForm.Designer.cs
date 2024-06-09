@@ -39,6 +39,7 @@
             playOriginal = new Button();
             label6 = new Label();
             label5 = new Label();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)filterOrderBar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cutoffFreqBar).BeginInit();
             SuspendLayout();
@@ -153,11 +154,20 @@
             label5.TabIndex = 13;
             label5.Text = "Filtracja liniowa FIR";
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(451, 105);
+            label7.Name = "label7";
+            label7.Size = new Size(0, 15);
+            label7.TabIndex = 15;
+            // 
             // FIRForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(playCreated);
@@ -190,5 +200,6 @@
         private Button playOriginal;
         private Label label6;
         private Label label5;
+        private Label label7;
     }
 }
