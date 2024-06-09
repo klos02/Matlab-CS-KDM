@@ -10,7 +10,7 @@ namespace Matlab_CS_KDM
     {
         
 
-        public void callDCTFunction(double treshold, double blockSize)
+        public int CallDCTFunction(double treshold, double blockSize)
         {
            
             // Create the MATLAB instance 
@@ -27,9 +27,35 @@ namespace Matlab_CS_KDM
             var audioPath = MainForm.selectedFilePath;
             matlab.Feval("myfunc2", 1, out result, audioPath, treshold, currentDirectory, blockSize);
 
-            // Display result 
+            return 0;
            
             
+        }
+
+        public int CallFirFunction(double n, double cutOff)
+        {
+
+            // Create the MATLAB instance 
+            MLApp.MLApp matlab = new MLApp.MLApp();
+            var currentDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+            // Change to the directory where the function is located 
+            matlab.Execute(@"cd E:\matlabTest");
+            //Console.WriteLine(currentDirectory);
+            // Define the output 
+            object result = null;
+
+            // Call the MATLAB function myfunc
+            //matlab.Feval("myfunc", 2, out result, 3.14, 42.0, "world");
+            var audioPath = MainForm.selectedFilePath;
+            matlab.Feval("firFiltering", 1, out result, audioPath, cutOff, n, currentDirectory);
+
+            return 0;
+            
+            
+
+            // Display result 
+
+
         }
     }
 }

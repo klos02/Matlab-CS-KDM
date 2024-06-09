@@ -37,6 +37,8 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
+            playOriginal = new Button();
+            playCreated = new Button();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
             SuspendLayout();
@@ -53,7 +55,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(634, 379);
+            button1.Location = new Point(633, 389);
             button1.Name = "button1";
             button1.Size = new Size(140, 49);
             button1.TabIndex = 1;
@@ -66,9 +68,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(739, 216);
             label1.Name = "label1";
-            label1.Size = new Size(28, 15);
+            label1.Size = new Size(34, 15);
             label1.TabIndex = 2;
-            label1.Text = "0,01";
+            label1.Text = "0,001";
             // 
             // label2
             // 
@@ -133,11 +135,33 @@
             label6.TabIndex = 8;
             label6.Text = "Analiza wpływu progu zerowania współczynników DCT i długości bloku na \r\nrekonstrukcję sygnału";
             // 
+            // playOriginal
+            // 
+            playOriginal.Location = new Point(12, 404);
+            playOriginal.Name = "playOriginal";
+            playOriginal.Size = new Size(191, 34);
+            playOriginal.TabIndex = 9;
+            playOriginal.Text = "Odtwórz sygnał oryginalny";
+            playOriginal.UseVisualStyleBackColor = true;
+            playOriginal.Click += playOriginal_Click;
+            // 
+            // playCreated
+            // 
+            playCreated.Location = new Point(209, 404);
+            playCreated.Name = "playCreated";
+            playCreated.Size = new Size(191, 34);
+            playCreated.TabIndex = 10;
+            playCreated.Text = "Odtwórz sygnał po rekonstrukcji\r\n";
+            playCreated.UseVisualStyleBackColor = true;
+            playCreated.Click += playCreated_Click;
+            // 
             // DCTForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(playCreated);
+            Controls.Add(playOriginal);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -167,5 +191,7 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private Button playOriginal;
+        private Button playCreated;
     }
 }

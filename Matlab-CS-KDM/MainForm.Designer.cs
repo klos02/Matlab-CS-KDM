@@ -84,6 +84,7 @@
             filtracjaLiniowaButton.TabIndex = 4;
             filtracjaLiniowaButton.Text = "Filtracja liniowa FIR";
             filtracjaLiniowaButton.UseVisualStyleBackColor = true;
+            filtracjaLiniowaButton.Click += filtracjaLiniowaButton_Click;
             // 
             // MainForm
             // 

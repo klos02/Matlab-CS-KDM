@@ -18,7 +18,7 @@ namespace Matlab_CS_KDM
 
         private void DisableControls()
         {
-            
+
             foreach (Control control in this.Controls)
             {
                 if (control != button2)
@@ -30,7 +30,7 @@ namespace Matlab_CS_KDM
 
         private void EnableControls()
         {
-            
+
             foreach (Control control in this.Controls)
             {
                 control.Enabled = true;
@@ -61,12 +61,19 @@ namespace Matlab_CS_KDM
                 EnableControls();
 
 
-                
+
             }
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void filtracjaLiniowaButton_Click(object sender, EventArgs e)
+        {
+            FIRForm firForm = new FIRForm();
+            firForm.Show();
 
         }
     }
