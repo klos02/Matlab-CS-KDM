@@ -12,7 +12,7 @@ namespace Matlab_CS_KDM
 
         public void callDCTFunction(double treshold, double blockSize)
         {
-             var file = @"\kdm_imie.wav";
+           
             // Create the MATLAB instance 
             MLApp.MLApp matlab = new MLApp.MLApp();
             var currentDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
@@ -21,10 +21,10 @@ namespace Matlab_CS_KDM
             //Console.WriteLine(currentDirectory);
             // Define the output 
             object result = null;
-            
+
             // Call the MATLAB function myfunc
             //matlab.Feval("myfunc", 2, out result, 3.14, 42.0, "world");
-            var audioPath = currentDirectory + file;
+            var audioPath = MainForm.selectedFilePath;
             matlab.Feval("myfunc2", 1, out result, audioPath, treshold, currentDirectory, blockSize);
 
             // Display result 
